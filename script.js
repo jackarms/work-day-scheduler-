@@ -1,7 +1,10 @@
 let date = document.getElementById("currentDay");
+var now = moment().format("dddd, MMMM Do YYYY");
 
-var newDate = new Date();
-newDate.setDate(newDate.getDate() + 1);
-$("#Date").html($.format.date(newDate, "ddd dd MMMM yyyy"));
-console.log(newDate);
-$(date).text(newDate);
+$(date).text(now);
+
+//let now;
+let past;
+let future;
+
+var nine = $("#nine");
