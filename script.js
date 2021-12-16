@@ -5,12 +5,18 @@ console.log(hour);
 
 $(date).text(now);
 
-$('div[class="time-block"]').each(function (index, item) {
+$("textarea").each(function (index, item) {
   if (parseInt($(item).data("index")) == hour) {
-    $('div[class="time-block"]').addClass("present");
+    $("textarea").addClass("present");
   } else if (parseInt($(item).data("index")) < hour) {
-    $('div[class="time-block"]').addClass("past");
+    $("textarea").addClass("past");
   } else {
-    $('div[class="time-block"]').addClass("future");
+    $("textarea").addClass("future");
   }
+});
+
+$("#btn").click(function () {
+  var textEl = $("#text").val();
+  localStorage.setItem("text", textEl);
+  alert(localStorage.getItem("text"));
 });
