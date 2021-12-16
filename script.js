@@ -26,6 +26,6 @@ $("button").click(function () {
 });
 
 var loadDescription = function () {
-  JSON.parse(window.localStorage.getItem("value"));
-  console.log("value");
+  returnValue = localStorage.getItem(timeBlock, textEl);
+  getElementById("text").value = returnValue;
 };
